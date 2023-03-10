@@ -1,10 +1,12 @@
 package co.com.arus.pensiones.model.asesor;
 
 import co.com.arus.pensiones.model.persona.Persona;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder(toBuilder = true)
