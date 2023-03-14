@@ -4,7 +4,9 @@ import co.com.arus.pensiones.causante.dto.CausanteDTO;
 import co.com.arus.pensiones.model.causante.Causante;
 
 public class CausanteConverter {
-    public CausanteConverter() {
+
+    private CausanteConverter() {
+        throw new IllegalStateException("Utility class");
     }
 
     public static CausanteDTO construirRespuesta(Causante causante){

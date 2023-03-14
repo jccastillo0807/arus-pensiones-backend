@@ -23,8 +23,6 @@ public class CausanteUseCase {
                         persona -> causanteRepository.crear(causante)
 
                 );
-
-//                causanteRepository.crear(causante);
     }
 
 }

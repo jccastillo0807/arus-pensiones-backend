@@ -64,7 +64,6 @@ public class DataMapper {
     }
 
 
-
     public static List<Causante> convertirIterableCausanteDataAListCausante(Iterable<CausanteData> causanteDataIterable) {
         List<Causante> listaCausantes = new ArrayList<>();
         causanteDataIterable.forEach(
@@ -73,5 +72,13 @@ public class DataMapper {
                 )
         );
         return listaCausantes;
+    }
+
+    public static List<Persona> convertirIterablePersonaDataAListPersona(Iterable<PersonaData> personaDataIterable) {
+        List<Persona> listaPersonas = new ArrayList<>();
+        personaDataIterable.forEach(
+                personaData -> listaPersonas.add(convertirPersonaDataAPersona(personaData))
+        );
+        return listaPersonas;
     }
 }

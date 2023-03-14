@@ -40,7 +40,7 @@ public class CausanteRepositoryAdapter extends AdapterOperations<Causante, Causa
 
     @Override
     public Mono<Causante> encontrarPorId(Integer id) {
-        if (id == null) {
+        if (id == null || id.equals("")) {
             return Mono.empty();
         }
         return Mono.just(findById(id));

@@ -11,7 +11,7 @@ import reactor.core.publisher.Mono;
 
 @Repository
 public class PersonaRepositoryAdapter extends AdapterOperations<Persona, PersonaData, Integer, PersonaDataRepository>
-implements PersonaRepository{
+        implements PersonaRepository {
 
     @Autowired
     public PersonaRepositoryAdapter(PersonaDataRepository repository, ObjectMapper mapper) {
@@ -20,7 +20,7 @@ implements PersonaRepository{
 
     @Override
     public Flux<Persona> verTodos() {
-        return null;
+        return doQueryMany(repository::findAll);
     }
 
     @Override
@@ -30,7 +30,12 @@ implements PersonaRepository{
 
     @Override
     public Mono<Persona> encontrarPorId(Integer id) {
-        return null;
+        if (id == null || id.equals("")) {
+            return Mono.empty();
+        }
+        return Mono.just(
+                findById(id)
+        );
     }
 
     @Override

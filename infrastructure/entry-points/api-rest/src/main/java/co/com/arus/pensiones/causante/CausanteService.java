@@ -20,7 +20,7 @@ public class CausanteService {
     @GetMapping(path = "/lista", produces = MediaType.APPLICATION_JSON_VALUE)
     public Flux<CausanteDTO> listarCausantes() {
         return causanteUseCase.encontrarCausantes()
-                .map(causante -> CausanteConverter.construirRespuesta(causante));
+                .map(CausanteConverter::construirRespuesta);
     }
 
     @PostMapping(path = "/crear-causante", produces = MediaType.APPLICATION_JSON_VALUE)
