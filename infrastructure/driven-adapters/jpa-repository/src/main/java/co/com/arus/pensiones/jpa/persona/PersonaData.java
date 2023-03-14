@@ -29,7 +29,7 @@ public class PersonaData {
     private String tipoDocumento;
 
     @NotEmpty
-    @Column(name = "numero_documento", length = 10)
+    @Column(name = "numero_documento", length = 20)
     private String numeroDocumento;
 
     @NotEmpty
@@ -50,13 +50,12 @@ public class PersonaData {
 
     @NotEmpty
     @Column(name = "genero")
-    private boolean genero;
+    private String genero;
 
-    @NotEmpty
+//    @NotEmpty
     @Column(name = "vivo")
     private boolean vivo;
 
-    @NotEmpty
     @Column(name = "fecha_nacimiento")
     private Date fechaNacimiento;
 

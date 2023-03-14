@@ -14,13 +14,13 @@ import java.util.Date;
 @Builder(toBuilder = true)
 public class Persona {
     private Integer id;
-    private TipoDocumento tipoDocumento;
+    private String tipoDocumento;
     private String numeroDocumento;
     private String primerNombre;
     private String segundoNombre;
     private String primerApellido;
     private String segundoApellido;
-    private Boolean genero;
+    private String genero;
     private Boolean vivo;
     private Date fechaNacimiento;
     private Date fechaDeceso;
